@@ -1,0 +1,7 @@
+module pipe_picker(rst, clk, pattern)
+	input logic rst, clk;
+	output logic [15:0] pattern;
+	
+	
+	
+endmodule

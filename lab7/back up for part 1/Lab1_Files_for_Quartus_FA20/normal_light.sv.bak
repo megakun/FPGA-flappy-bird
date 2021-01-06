@@ -1,0 +1,12 @@
+module normalLight (clk, rst, PL, PR, NL, NR, light);
+	input logic clk, rst, NL, NR, PL, PR;
+	output logic light;
+	// PL is true when Player 1 (left) gets a point
+	// PR is true when Player 2 (right) gets a point
+	// NL is true when the light directly to the left is on
+	// NR is true when the light directly to the right is on
+	// when light is true, this light should be on.
+	output logic light;
+	// Your code goes here!!
+endmodule
+

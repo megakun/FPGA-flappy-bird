@@ -1,0 +1,411 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:24:44 on Nov 25,2020
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module clock_divider
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 04:24:44 on Nov 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
+# Start time: 04:24:44 on Nov 25,2020
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# Loading work.clock_divider
+# Loading work.bot
+# Loading work.random
+# Loading work.series_diffs
+# Loading work.input_buffer
+# Loading work.light_field
+# Loading work.normalLight
+# Loading work.centerLight
+# Loading work.victory
+# Loading work.seg7
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: megak  Hostname: KUN-LAPTOP  ProcessID: 17220
+#           Attempting to use alternate WLF file "./wlftj3b06h".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftj3b06h
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./DE1_SoC.sv(202)
+#    Time: 63550 ps  Iteration: 1  Instance: /DE1_SoC_testbench
+# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 202
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:26:40 on Nov 25,2020
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module clock_divider
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 04:26:40 on Nov 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:26:43 on Nov 25,2020, Elapsed time: 0:01:59
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
+# Start time: 04:26:43 on Nov 25,2020
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# Loading work.clock_divider
+# Loading work.bot
+# Loading work.random
+# Loading work.series_diffs
+# Loading work.input_buffer
+# Loading work.light_field
+# Loading work.normalLight
+# Loading work.centerLight
+# Loading work.victory
+# Loading work.seg7
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: megak  Hostname: KUN-LAPTOP  ProcessID: 17220
+#           Attempting to use alternate WLF file "./wlftx1c34f".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftx1c34f
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./DE1_SoC.sv(202)
+#    Time: 63550 ps  Iteration: 1  Instance: /DE1_SoC_testbench
+# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 202
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:28:47 on Nov 25,2020
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module clock_divider
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 04:28:47 on Nov 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:28:51 on Nov 25,2020, Elapsed time: 0:02:08
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
+# Start time: 04:28:51 on Nov 25,2020
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# Loading work.clock_divider
+# Loading work.bot
+# Loading work.random
+# Loading work.series_diffs
+# Loading work.input_buffer
+# Loading work.light_field
+# Loading work.normalLight
+# Loading work.centerLight
+# Loading work.victory
+# Loading work.seg7
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: megak  Hostname: KUN-LAPTOP  ProcessID: 17220
+#           Attempting to use alternate WLF file "./wlft87a2bj".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft87a2bj
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./DE1_SoC.sv(202)
+#    Time: 63550 ps  Iteration: 1  Instance: /DE1_SoC_testbench
+# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 202
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:34:03 on Nov 25,2020
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module clock_divider
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 04:34:03 on Nov 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:34:07 on Nov 25,2020, Elapsed time: 0:05:16
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
+# Start time: 04:34:07 on Nov 25,2020
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# Loading work.clock_divider
+# Loading work.bot
+# Loading work.random
+# Loading work.series_diffs
+# Loading work.input_buffer
+# Loading work.light_field
+# Loading work.normalLight
+# Loading work.centerLight
+# Loading work.victory
+# Loading work.seg7
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: megak  Hostname: KUN-LAPTOP  ProcessID: 17220
+#           Attempting to use alternate WLF file "./wlftk90m49".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftk90m49
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./DE1_SoC.sv(202)
+#    Time: 63550 ps  Iteration: 1  Instance: /DE1_SoC_testbench
+# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 202
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:35:16 on Nov 25,2020
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module clock_divider
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 04:35:16 on Nov 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:35:20 on Nov 25,2020, Elapsed time: 0:01:13
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
+# Start time: 04:35:20 on Nov 25,2020
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# Loading work.clock_divider
+# Loading work.bot
+# Loading work.random
+# Loading work.series_diffs
+# Loading work.input_buffer
+# Loading work.light_field
+# Loading work.normalLight
+# Loading work.centerLight
+# Loading work.victory
+# Loading work.seg7
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: megak  Hostname: KUN-LAPTOP  ProcessID: 17220
+#           Attempting to use alternate WLF file "./wlft6702s8".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft6702s8
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./DE1_SoC.sv(202)
+#    Time: 63550 ps  Iteration: 1  Instance: /DE1_SoC_testbench
+# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 202
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:36:45 on Nov 25,2020
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module clock_divider
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 04:36:45 on Nov 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:36:48 on Nov 25,2020, Elapsed time: 0:01:28
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
+# Start time: 04:36:48 on Nov 25,2020
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# Loading work.clock_divider
+# Loading work.bot
+# Loading work.random
+# Loading work.series_diffs
+# Loading work.input_buffer
+# Loading work.light_field
+# Loading work.normalLight
+# Loading work.centerLight
+# Loading work.victory
+# Loading work.seg7
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: megak  Hostname: KUN-LAPTOP  ProcessID: 17220
+#           Attempting to use alternate WLF file "./wlftke153b".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftke153b
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./DE1_SoC.sv(208)
+#    Time: 63950 ps  Iteration: 1  Instance: /DE1_SoC_testbench
+# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 208
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:45:17 on Nov 25,2020
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module clock_divider
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 04:45:18 on Nov 25,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 04:45:21 on Nov 25,2020, Elapsed time: 0:08:33
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
+# Start time: 04:45:21 on Nov 25,2020
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# Loading work.clock_divider
+# Loading work.bot
+# Loading work.random
+# Loading work.series_diffs
+# Loading work.input_buffer
+# Loading work.light_field
+# Loading work.normalLight
+# Loading work.centerLight
+# Loading work.victory
+# Loading work.seg7
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: megak  Hostname: KUN-LAPTOP  ProcessID: 17220
+#           Attempting to use alternate WLF file "./wlft2v4dwf".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft2v4dwf
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./DE1_SoC.sv(208)
+#    Time: 63950 ps  Iteration: 1  Instance: /DE1_SoC_testbench
+# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 208
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:45:50 on Nov 25,2020
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module clock_divider
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 04:45:50 on Nov 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 04:45:56 on Nov 25,2020, Elapsed time: 0:00:35
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
+# Start time: 04:45:56 on Nov 25,2020
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# Loading work.clock_divider
+# Loading work.bot
+# Loading work.random
+# Loading work.series_diffs
+# Loading work.input_buffer
+# Loading work.light_field
+# Loading work.normalLight
+# Loading work.centerLight
+# Loading work.victory
+# Loading work.seg7
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: megak  Hostname: KUN-LAPTOP  ProcessID: 17220
+#           Attempting to use alternate WLF file "./wlftey2v3j".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftey2v3j
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./DE1_SoC.sv(208)
+#    Time: 63950 ps  Iteration: 1  Instance: /DE1_SoC_testbench
+# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 208
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:17:06 on Nov 25,2020
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module clock_divider
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 05:17:06 on Nov 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 05:17:08 on Nov 25,2020, Elapsed time: 0:31:12
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
+# Start time: 05:17:08 on Nov 25,2020
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# Loading work.clock_divider
+# Loading work.bot
+# Loading work.random
+# Loading work.series_diffs
+# Loading work.input_buffer
+# Loading work.light_field
+# Loading work.normalLight
+# Loading work.centerLight
+# Loading work.victory
+# Loading work.seg7
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: megak  Hostname: KUN-LAPTOP  ProcessID: 17220
+#           Attempting to use alternate WLF file "./wlft7fznj1".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft7fznj1
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./DE1_SoC.sv(208)
+#    Time: 63950 ps  Iteration: 1  Instance: /DE1_SoC_testbench
+# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 208
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:18:31 on Nov 25,2020
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module clock_divider
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 05:18:31 on Nov 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 05:18:34 on Nov 25,2020, Elapsed time: 0:01:26
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
+# Start time: 05:18:34 on Nov 25,2020
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# Loading work.clock_divider
+# Loading work.bot
+# Loading work.random
+# Loading work.series_diffs
+# Loading work.input_buffer
+# Loading work.light_field
+# Loading work.normalLight
+# Loading work.centerLight
+# Loading work.victory
+# Loading work.seg7
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: megak  Hostname: KUN-LAPTOP  ProcessID: 17220
+#           Attempting to use alternate WLF file "./wlfttw98aa".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfttw98aa
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./DE1_SoC.sv(213)
+#    Time: 64250 ps  Iteration: 1  Instance: /DE1_SoC_testbench
+# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 213
+# End time: 05:19:24 on Nov 25,2020, Elapsed time: 0:00:50
+# Errors: 0, Warnings: 2

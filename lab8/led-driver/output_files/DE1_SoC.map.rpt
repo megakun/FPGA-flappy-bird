@@ -1,0 +1,898 @@
+Analysis & Synthesis report for DE1_SoC
+Fri Dec 11 22:29:23 2020
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: LEDDriver:Driver
+ 12. Parameter Settings for User Entity Instance: bird:flappy
+ 13. Parameter Settings for User Entity Instance: pipe_generator:pipes
+ 14. Parameter Settings for User Entity Instance: pipe_generator:pipes|pipe_picker:picker
+ 15. Parameter Settings for User Entity Instance: score:counter
+ 16. Port Connectivity Checks: "collision:detector"
+ 17. Port Connectivity Checks: "LEDDriver:Driver"
+ 18. Port Connectivity Checks: "clock_divider:cdiv"
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
+ 22. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Dec 11 22:29:23 2020       ;
+; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
+; Revision Name                   ; DE1_SoC                                     ;
+; Top-level Entity Name           ; DE1_SoC                                     ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 431                                         ;
+; Total pins                      ; 103                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; DE1_SoC            ; DE1_SoC            ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; State Machine Processing                                                        ; User-Encoded       ; Auto               ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; OpenCore Plus hardware evaluation                                               ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                     ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
+; clock_divider.sv                 ; yes             ; User SystemVerilog HDL File  ; F:/study/AU 20/ee271/ee271labs/lab8/led-driver/clock_divider.sv  ;         ;
+; LEDDriver.sv                     ; yes             ; User SystemVerilog HDL File  ; F:/study/AU 20/ee271/ee271labs/lab8/led-driver/LEDDriver.sv      ;         ;
+; DE1_SoC.sv                       ; yes             ; User SystemVerilog HDL File  ; F:/study/AU 20/ee271/ee271labs/lab8/led-driver/DE1_SoC.sv        ;         ;
+; bird.sv                          ; yes             ; User SystemVerilog HDL File  ; F:/study/AU 20/ee271/ee271labs/lab8/led-driver/bird.sv           ;         ;
+; series_diffs.sv                  ; yes             ; User SystemVerilog HDL File  ; F:/study/AU 20/ee271/ee271labs/lab8/led-driver/series_diffs.sv   ;         ;
+; pipe_generator.sv                ; yes             ; User SystemVerilog HDL File  ; F:/study/AU 20/ee271/ee271labs/lab8/led-driver/pipe_generator.sv ;         ;
+; pipe_picker.sv                   ; yes             ; User SystemVerilog HDL File  ; F:/study/AU 20/ee271/ee271labs/lab8/led-driver/pipe_picker.sv    ;         ;
+; seg7.sv                          ; yes             ; User SystemVerilog HDL File  ; F:/study/AU 20/ee271/ee271labs/lab8/led-driver/seg7.sv           ;         ;
+; collision.sv                     ; yes             ; User SystemVerilog HDL File  ; F:/study/AU 20/ee271/ee271labs/lab8/led-driver/collision.sv      ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 395            ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 619            ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 157            ;
+;     -- 5 input functions                    ; 73             ;
+;     -- 4 input functions                    ; 57             ;
+;     -- <=3 input functions                  ; 332            ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 431            ;
+;                                             ;                ;
+; I/O pins                                    ; 103            ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 431            ;
+; Total fan-out                               ; 4007           ;
+; Average fan-out                             ; 3.19           ;
++---------------------------------------------+----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                    ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------+----------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                              ; Entity Name    ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------+----------------+--------------+
+; |DE1_SoC                   ; 619 (99)            ; 431 (0)                   ; 0                 ; 0          ; 103  ; 0            ; |DE1_SoC                                         ; DE1_SoC        ; work         ;
+;    |LEDDriver:Driver|      ; 59 (59)             ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|LEDDriver:Driver                        ; LEDDriver      ; work         ;
+;    |bird:flappy|           ; 130 (130)           ; 96 (96)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|bird:flappy                             ; bird           ; work         ;
+;    |collision:detector|    ; 91 (91)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|collision:detector                      ; collision      ; work         ;
+;    |pipe_generator:pipes|  ; 171 (96)            ; 256 (192)                 ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|pipe_generator:pipes                    ; pipe_generator ; work         ;
+;       |pipe_picker:picker| ; 75 (75)             ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|pipe_generator:pipes|pipe_picker:picker ; pipe_picker    ; work         ;
+;    |score:counter|         ; 54 (54)             ; 40 (40)                   ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|score:counter                           ; score          ; work         ;
+;    |seg7:one|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|seg7:one                                ; seg7           ; work         ;
+;    |seg7:ten|              ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|seg7:ten                                ; seg7           ; work         ;
+;    |series_diffs:s1|       ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|series_diffs:s1                         ; series_diffs   ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------+----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                           ;
++-----------------------------------------+----------------------------------------------------+
+; Register name                           ; Reason for Removal                                 ;
++-----------------------------------------+----------------------------------------------------+
+; collision:detector|PixelOn[0][0]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[0][1]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[0][2]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[0][3]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[0][4]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[0][5]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[0][6]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[0][7]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[0][8]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[0][9]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[0][10]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[0][11]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[0][14]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[0][15]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[1][0]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[1][1]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[1][2]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[1][3]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[1][4]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[1][5]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[1][6]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[1][7]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[1][8]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[1][9]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[1][10]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[1][11]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[1][14]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[1][15]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[2][0]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[2][1]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[2][2]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[2][3]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[2][4]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[2][5]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[2][6]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[2][7]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[2][8]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[2][9]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[2][10]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[2][11]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[2][14]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[2][15]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[3][0]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[3][1]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[3][2]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[3][3]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[3][4]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[3][5]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[3][6]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[3][7]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[3][8]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[3][9]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[3][10]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[3][11]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[3][14]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[3][15]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[4][0]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[4][1]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[4][2]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[4][3]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[4][4]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[4][5]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[4][6]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[4][7]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[4][8]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[4][9]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[4][10]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[4][11]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[4][14]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[4][15]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[5][0]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[5][1]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[5][2]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[5][3]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[5][4]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[5][5]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[5][6]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[5][7]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[5][8]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[5][9]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[5][10]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[5][11]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[5][14]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[5][15]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[6][0]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[6][1]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[6][2]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[6][3]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[6][4]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[6][5]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[6][6]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[6][7]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[6][8]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[6][9]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[6][10]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[6][11]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[6][14]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[6][15]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[7][0]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[7][1]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[7][2]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[7][3]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[7][4]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[7][5]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[7][6]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[7][7]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[7][8]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[7][9]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[7][10]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[7][11]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[7][14]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[7][15]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[8][0]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[8][1]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[8][2]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[8][3]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[8][4]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[8][5]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[8][6]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[8][7]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[8][8]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[8][9]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[8][10]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[8][11]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[8][14]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[8][15]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[9][0]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[9][1]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[9][2]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[9][3]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[9][4]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[9][5]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[9][6]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[9][7]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[9][8]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[9][9]        ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[9][10]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[9][11]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[9][14]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[9][15]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[10][0]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[10][1]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[10][2]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[10][3]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[10][4]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[10][5]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[10][6]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[10][7]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[10][8]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[10][9]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[10][10]      ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[10][11]      ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[10][14]      ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[10][15]      ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[11][0]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[11][1]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[11][2]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[11][3]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[11][4]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[11][5]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[11][6]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[11][7]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[11][8]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[11][9]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[11][10]      ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[11][11]      ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[11][14]      ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[11][15]      ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[12][0]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[12][1]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[12][2]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[12][3]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[12][4]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[12][5]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[12][6]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[12][7]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[12][8]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[12][9]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[12][10]      ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[12][11]      ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[12][14]      ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[12][15]      ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[13][0]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[13][1]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[13][2]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[13][3]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[13][4]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[13][5]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[13][6]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[13][7]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[13][8]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[13][9]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[13][10]      ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[13][11]      ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[13][14]      ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[13][15]      ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[14][0]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[14][1]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[14][2]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[14][3]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[14][4]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[14][5]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[14][6]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[14][7]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[14][8]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[14][9]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[14][10]      ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[14][11]      ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[14][14]      ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[14][15]      ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[15][0]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[15][1]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[15][2]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[15][3]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[15][4]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[15][5]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[15][6]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[15][7]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[15][8]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[15][9]       ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[15][10]      ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[15][11]      ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[15][14]      ; Stuck at GND due to stuck port data_in             ;
+; collision:detector|PixelOn[15][15]      ; Stuck at GND due to stuck port data_in             ;
+; pipe_generator:pipes|GrnPixels[13][15]  ; Merged with pipe_generator:pipes|GrnPixels[12][15] ;
+; pipe_generator:pipes|GrnPixels[14][15]  ; Merged with pipe_generator:pipes|GrnPixels[12][15] ;
+; pipe_generator:pipes|GrnPixels[15][15]  ; Merged with pipe_generator:pipes|GrnPixels[12][15] ;
+; pipe_generator:pipes|GrnPixels[13][5]   ; Merged with pipe_generator:pipes|GrnPixels[12][5]  ;
+; pipe_generator:pipes|GrnPixels[14][5]   ; Merged with pipe_generator:pipes|GrnPixels[12][5]  ;
+; pipe_generator:pipes|GrnPixels[15][5]   ; Merged with pipe_generator:pipes|GrnPixels[12][5]  ;
+; pipe_generator:pipes|GrnPixels[5][5]    ; Merged with pipe_generator:pipes|GrnPixels[4][5]   ;
+; pipe_generator:pipes|GrnPixels[6][5]    ; Merged with pipe_generator:pipes|GrnPixels[4][5]   ;
+; pipe_generator:pipes|GrnPixels[3][5]    ; Merged with pipe_generator:pipes|GrnPixels[2][5]   ;
+; pipe_generator:pipes|GrnPixels[13][4]   ; Merged with pipe_generator:pipes|GrnPixels[12][4]  ;
+; pipe_generator:pipes|GrnPixels[14][4]   ; Merged with pipe_generator:pipes|GrnPixels[12][4]  ;
+; pipe_generator:pipes|GrnPixels[15][4]   ; Merged with pipe_generator:pipes|GrnPixels[12][4]  ;
+; pipe_generator:pipes|GrnPixels[11][4]   ; Merged with pipe_generator:pipes|GrnPixels[10][4]  ;
+; pipe_generator:pipes|GrnPixels[9][4]    ; Merged with pipe_generator:pipes|GrnPixels[8][4]   ;
+; pipe_generator:pipes|GrnPixels[5][4]    ; Merged with pipe_generator:pipes|GrnPixels[4][4]   ;
+; pipe_generator:pipes|GrnPixels[6][4]    ; Merged with pipe_generator:pipes|GrnPixels[4][4]   ;
+; pipe_generator:pipes|GrnPixels[3][4]    ; Merged with pipe_generator:pipes|GrnPixels[2][4]   ;
+; pipe_generator:pipes|GrnPixels[13][3]   ; Merged with pipe_generator:pipes|GrnPixels[12][3]  ;
+; pipe_generator:pipes|GrnPixels[14][3]   ; Merged with pipe_generator:pipes|GrnPixels[12][3]  ;
+; pipe_generator:pipes|GrnPixels[15][3]   ; Merged with pipe_generator:pipes|GrnPixels[12][3]  ;
+; pipe_generator:pipes|GrnPixels[11][3]   ; Merged with pipe_generator:pipes|GrnPixels[10][3]  ;
+; pipe_generator:pipes|GrnPixels[9][3]    ; Merged with pipe_generator:pipes|GrnPixels[8][3]   ;
+; pipe_generator:pipes|GrnPixels[5][3]    ; Merged with pipe_generator:pipes|GrnPixels[4][3]   ;
+; pipe_generator:pipes|GrnPixels[6][3]    ; Merged with pipe_generator:pipes|GrnPixels[4][3]   ;
+; pipe_generator:pipes|GrnPixels[3][3]    ; Merged with pipe_generator:pipes|GrnPixels[2][3]   ;
+; pipe_generator:pipes|GrnPixels[13][2]   ; Merged with pipe_generator:pipes|GrnPixels[12][2]  ;
+; pipe_generator:pipes|GrnPixels[14][2]   ; Merged with pipe_generator:pipes|GrnPixels[12][2]  ;
+; pipe_generator:pipes|GrnPixels[15][2]   ; Merged with pipe_generator:pipes|GrnPixels[12][2]  ;
+; pipe_generator:pipes|GrnPixels[11][2]   ; Merged with pipe_generator:pipes|GrnPixels[10][2]  ;
+; pipe_generator:pipes|GrnPixels[9][2]    ; Merged with pipe_generator:pipes|GrnPixels[8][2]   ;
+; pipe_generator:pipes|GrnPixels[5][2]    ; Merged with pipe_generator:pipes|GrnPixels[4][2]   ;
+; pipe_generator:pipes|GrnPixels[6][2]    ; Merged with pipe_generator:pipes|GrnPixels[4][2]   ;
+; pipe_generator:pipes|GrnPixels[3][2]    ; Merged with pipe_generator:pipes|GrnPixels[2][2]   ;
+; pipe_generator:pipes|GrnPixels[13][1]   ; Merged with pipe_generator:pipes|GrnPixels[12][1]  ;
+; pipe_generator:pipes|GrnPixels[14][1]   ; Merged with pipe_generator:pipes|GrnPixels[12][1]  ;
+; pipe_generator:pipes|GrnPixels[15][1]   ; Merged with pipe_generator:pipes|GrnPixels[12][1]  ;
+; pipe_generator:pipes|GrnPixels[11][1]   ; Merged with pipe_generator:pipes|GrnPixels[10][1]  ;
+; pipe_generator:pipes|GrnPixels[9][1]    ; Merged with pipe_generator:pipes|GrnPixels[8][1]   ;
+; pipe_generator:pipes|GrnPixels[5][1]    ; Merged with pipe_generator:pipes|GrnPixels[4][1]   ;
+; pipe_generator:pipes|GrnPixels[6][1]    ; Merged with pipe_generator:pipes|GrnPixels[4][1]   ;
+; pipe_generator:pipes|GrnPixels[3][1]    ; Merged with pipe_generator:pipes|GrnPixels[2][1]   ;
+; pipe_generator:pipes|GrnPixels[13][0]   ; Merged with pipe_generator:pipes|GrnPixels[12][0]  ;
+; pipe_generator:pipes|GrnPixels[14][0]   ; Merged with pipe_generator:pipes|GrnPixels[12][0]  ;
+; pipe_generator:pipes|GrnPixels[15][0]   ; Merged with pipe_generator:pipes|GrnPixels[12][0]  ;
+; pipe_generator:pipes|GrnPixels[11][0]   ; Merged with pipe_generator:pipes|GrnPixels[10][0]  ;
+; pipe_generator:pipes|GrnPixels[9][0]    ; Merged with pipe_generator:pipes|GrnPixels[8][0]   ;
+; pipe_generator:pipes|GrnPixels[5][0]    ; Merged with pipe_generator:pipes|GrnPixels[4][0]   ;
+; pipe_generator:pipes|GrnPixels[6][0]    ; Merged with pipe_generator:pipes|GrnPixels[4][0]   ;
+; pipe_generator:pipes|GrnPixels[3][0]    ; Merged with pipe_generator:pipes|GrnPixels[2][0]   ;
+; pipe_generator:pipes|GrnPixels[13][6]   ; Merged with pipe_generator:pipes|GrnPixels[12][6]  ;
+; pipe_generator:pipes|GrnPixels[14][6]   ; Merged with pipe_generator:pipes|GrnPixels[12][6]  ;
+; pipe_generator:pipes|GrnPixels[15][6]   ; Merged with pipe_generator:pipes|GrnPixels[12][6]  ;
+; pipe_generator:pipes|GrnPixels[5][6]    ; Merged with pipe_generator:pipes|GrnPixels[4][6]   ;
+; pipe_generator:pipes|GrnPixels[6][6]    ; Merged with pipe_generator:pipes|GrnPixels[4][6]   ;
+; pipe_generator:pipes|GrnPixels[3][6]    ; Merged with pipe_generator:pipes|GrnPixels[2][6]   ;
+; pipe_generator:pipes|GrnPixels[11][5]   ; Merged with pipe_generator:pipes|GrnPixels[10][5]  ;
+; pipe_generator:pipes|GrnPixels[9][5]    ; Merged with pipe_generator:pipes|GrnPixels[8][5]   ;
+; pipe_generator:pipes|GrnPixels[13][7]   ; Merged with pipe_generator:pipes|GrnPixels[12][7]  ;
+; pipe_generator:pipes|GrnPixels[14][7]   ; Merged with pipe_generator:pipes|GrnPixels[12][7]  ;
+; pipe_generator:pipes|GrnPixels[15][7]   ; Merged with pipe_generator:pipes|GrnPixels[12][7]  ;
+; pipe_generator:pipes|GrnPixels[11][6]   ; Merged with pipe_generator:pipes|GrnPixels[10][6]  ;
+; pipe_generator:pipes|GrnPixels[9][6]    ; Merged with pipe_generator:pipes|GrnPixels[8][6]   ;
+; pipe_generator:pipes|GrnPixels[5][7]    ; Merged with pipe_generator:pipes|GrnPixels[4][7]   ;
+; pipe_generator:pipes|GrnPixels[6][7]    ; Merged with pipe_generator:pipes|GrnPixels[4][7]   ;
+; pipe_generator:pipes|GrnPixels[3][7]    ; Merged with pipe_generator:pipes|GrnPixels[2][7]   ;
+; pipe_generator:pipes|GrnPixels[13][8]   ; Merged with pipe_generator:pipes|GrnPixels[12][8]  ;
+; pipe_generator:pipes|GrnPixels[14][8]   ; Merged with pipe_generator:pipes|GrnPixels[12][8]  ;
+; pipe_generator:pipes|GrnPixels[15][8]   ; Merged with pipe_generator:pipes|GrnPixels[12][8]  ;
+; pipe_generator:pipes|GrnPixels[11][7]   ; Merged with pipe_generator:pipes|GrnPixels[10][7]  ;
+; pipe_generator:pipes|GrnPixels[9][7]    ; Merged with pipe_generator:pipes|GrnPixels[8][7]   ;
+; pipe_generator:pipes|GrnPixels[5][8]    ; Merged with pipe_generator:pipes|GrnPixels[4][8]   ;
+; pipe_generator:pipes|GrnPixels[6][8]    ; Merged with pipe_generator:pipes|GrnPixels[4][8]   ;
+; pipe_generator:pipes|GrnPixels[3][8]    ; Merged with pipe_generator:pipes|GrnPixels[2][8]   ;
+; pipe_generator:pipes|GrnPixels[13][9]   ; Merged with pipe_generator:pipes|GrnPixels[12][9]  ;
+; pipe_generator:pipes|GrnPixels[14][9]   ; Merged with pipe_generator:pipes|GrnPixels[12][9]  ;
+; pipe_generator:pipes|GrnPixels[15][9]   ; Merged with pipe_generator:pipes|GrnPixels[12][9]  ;
+; pipe_generator:pipes|GrnPixels[11][8]   ; Merged with pipe_generator:pipes|GrnPixels[10][8]  ;
+; pipe_generator:pipes|GrnPixels[9][8]    ; Merged with pipe_generator:pipes|GrnPixels[8][8]   ;
+; pipe_generator:pipes|GrnPixels[5][9]    ; Merged with pipe_generator:pipes|GrnPixels[4][9]   ;
+; pipe_generator:pipes|GrnPixels[6][9]    ; Merged with pipe_generator:pipes|GrnPixels[4][9]   ;
+; pipe_generator:pipes|GrnPixels[3][9]    ; Merged with pipe_generator:pipes|GrnPixels[2][9]   ;
+; pipe_generator:pipes|GrnPixels[13][10]  ; Merged with pipe_generator:pipes|GrnPixels[12][10] ;
+; pipe_generator:pipes|GrnPixels[14][10]  ; Merged with pipe_generator:pipes|GrnPixels[12][10] ;
+; pipe_generator:pipes|GrnPixels[15][10]  ; Merged with pipe_generator:pipes|GrnPixels[12][10] ;
+; pipe_generator:pipes|GrnPixels[11][9]   ; Merged with pipe_generator:pipes|GrnPixels[10][9]  ;
+; pipe_generator:pipes|GrnPixels[9][9]    ; Merged with pipe_generator:pipes|GrnPixels[8][9]   ;
+; pipe_generator:pipes|GrnPixels[5][10]   ; Merged with pipe_generator:pipes|GrnPixels[4][10]  ;
+; pipe_generator:pipes|GrnPixels[6][10]   ; Merged with pipe_generator:pipes|GrnPixels[4][10]  ;
+; pipe_generator:pipes|GrnPixels[3][10]   ; Merged with pipe_generator:pipes|GrnPixels[2][10]  ;
+; pipe_generator:pipes|GrnPixels[13][11]  ; Merged with pipe_generator:pipes|GrnPixels[12][11] ;
+; pipe_generator:pipes|GrnPixels[14][11]  ; Merged with pipe_generator:pipes|GrnPixels[12][11] ;
+; pipe_generator:pipes|GrnPixels[15][11]  ; Merged with pipe_generator:pipes|GrnPixels[12][11] ;
+; pipe_generator:pipes|GrnPixels[11][10]  ; Merged with pipe_generator:pipes|GrnPixels[10][10] ;
+; pipe_generator:pipes|GrnPixels[9][10]   ; Merged with pipe_generator:pipes|GrnPixels[8][10]  ;
+; pipe_generator:pipes|GrnPixels[5][11]   ; Merged with pipe_generator:pipes|GrnPixels[4][11]  ;
+; pipe_generator:pipes|GrnPixels[6][11]   ; Merged with pipe_generator:pipes|GrnPixels[4][11]  ;
+; pipe_generator:pipes|GrnPixels[3][11]   ; Merged with pipe_generator:pipes|GrnPixels[2][11]  ;
+; pipe_generator:pipes|GrnPixels[13][12]  ; Merged with pipe_generator:pipes|GrnPixels[12][12] ;
+; pipe_generator:pipes|GrnPixels[14][12]  ; Merged with pipe_generator:pipes|GrnPixels[12][12] ;
+; pipe_generator:pipes|GrnPixels[15][12]  ; Merged with pipe_generator:pipes|GrnPixels[12][12] ;
+; pipe_generator:pipes|GrnPixels[11][11]  ; Merged with pipe_generator:pipes|GrnPixels[10][11] ;
+; pipe_generator:pipes|GrnPixels[9][11]   ; Merged with pipe_generator:pipes|GrnPixels[8][11]  ;
+; pipe_generator:pipes|GrnPixels[5][12]   ; Merged with pipe_generator:pipes|GrnPixels[4][12]  ;
+; pipe_generator:pipes|GrnPixels[6][12]   ; Merged with pipe_generator:pipes|GrnPixels[4][12]  ;
+; pipe_generator:pipes|GrnPixels[3][12]   ; Merged with pipe_generator:pipes|GrnPixels[2][12]  ;
+; pipe_generator:pipes|GrnPixels[13][13]  ; Merged with pipe_generator:pipes|GrnPixels[12][13] ;
+; pipe_generator:pipes|GrnPixels[14][13]  ; Merged with pipe_generator:pipes|GrnPixels[12][13] ;
+; pipe_generator:pipes|GrnPixels[15][13]  ; Merged with pipe_generator:pipes|GrnPixels[12][13] ;
+; pipe_generator:pipes|GrnPixels[11][12]  ; Merged with pipe_generator:pipes|GrnPixels[10][12] ;
+; pipe_generator:pipes|GrnPixels[9][12]   ; Merged with pipe_generator:pipes|GrnPixels[8][12]  ;
+; pipe_generator:pipes|GrnPixels[5][13]   ; Merged with pipe_generator:pipes|GrnPixels[4][13]  ;
+; pipe_generator:pipes|GrnPixels[6][13]   ; Merged with pipe_generator:pipes|GrnPixels[4][13]  ;
+; pipe_generator:pipes|GrnPixels[3][13]   ; Merged with pipe_generator:pipes|GrnPixels[2][13]  ;
+; pipe_generator:pipes|GrnPixels[13][14]  ; Merged with pipe_generator:pipes|GrnPixels[12][14] ;
+; pipe_generator:pipes|GrnPixels[14][14]  ; Merged with pipe_generator:pipes|GrnPixels[12][14] ;
+; pipe_generator:pipes|GrnPixels[15][14]  ; Merged with pipe_generator:pipes|GrnPixels[12][14] ;
+; pipe_generator:pipes|GrnPixels[11][13]  ; Merged with pipe_generator:pipes|GrnPixels[10][13] ;
+; pipe_generator:pipes|GrnPixels[9][13]   ; Merged with pipe_generator:pipes|GrnPixels[8][13]  ;
+; pipe_generator:pipes|GrnPixels[5][14]   ; Merged with pipe_generator:pipes|GrnPixels[4][14]  ;
+; pipe_generator:pipes|GrnPixels[6][14]   ; Merged with pipe_generator:pipes|GrnPixels[4][14]  ;
+; pipe_generator:pipes|GrnPixels[3][14]   ; Merged with pipe_generator:pipes|GrnPixels[2][14]  ;
+; pipe_generator:pipes|GrnPixels[5][15]   ; Merged with pipe_generator:pipes|GrnPixels[4][15]  ;
+; pipe_generator:pipes|GrnPixels[6][15]   ; Merged with pipe_generator:pipes|GrnPixels[4][15]  ;
+; pipe_generator:pipes|GrnPixels[3][15]   ; Merged with pipe_generator:pipes|GrnPixels[2][15]  ;
+; pipe_generator:pipes|GrnPixels[11][14]  ; Merged with pipe_generator:pipes|GrnPixels[10][14] ;
+; pipe_generator:pipes|GrnPixels[9][14]   ; Merged with pipe_generator:pipes|GrnPixels[8][14]  ;
+; pipe_generator:pipes|GrnPixels[11][15]  ; Merged with pipe_generator:pipes|GrnPixels[10][15] ;
+; pipe_generator:pipes|GrnPixels[9][15]   ; Merged with pipe_generator:pipes|GrnPixels[8][15]  ;
+; Total Number of Removed Registers = 352 ;                                                    ;
++-----------------------------------------+----------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 431   ;
+; Number of registers using Synchronous Clear  ; 377   ;
+; Number of registers using Synchronous Load   ; 33    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 356   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DE1_SoC|score:counter|tens[3]                                  ;
+; 3:1                ; 120 bits  ; 240 LEs       ; 0 LEs                ; 240 LEs                ; Yes        ; |DE1_SoC|pipe_generator:pipes|GrnPixels[12][8]                  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SoC|score:counter|point[29]                                ;
+; 3:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |DE1_SoC|pipe_generator:pipes|pipe_picker:picker|pattern_num[5] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SoC|pipe_generator:pipes|pipe_picker:picker|cycle[16]      ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |DE1_SoC|bird:flappy|position[2]                                ;
+; 4:1                ; 30 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |DE1_SoC|bird:flappy|position[6]                                ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SoC|bird:flappy|gravity[29]                                ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SoC|bird:flappy|fly[2]                                     ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SoC|pipe_generator:pipes|gap[19]                           ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 0 LEs                ; 64 LEs                 ; Yes        ; |DE1_SoC|pipe_generator:pipes|shift[17]                         ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |DE1_SoC|score:counter|ones[0]                                  ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DE1_SoC|pipe_generator:pipes|GrnPixels[2][0]                   ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 12 LEs               ; 3 LEs                  ; Yes        ; |DE1_SoC|pipe_generator:pipes|GrnPixels[10][0]                  ;
+; 16:1               ; 16 bits   ; 160 LEs       ; 80 LEs               ; 80 LEs                 ; No         ; |DE1_SoC|LEDDriver:Driver|Mux3                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LEDDriver:Driver ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; FREQDIV        ; 0     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: bird:flappy ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; FLY_THRESHOLD  ; 0     ; Signed Integer                  ;
+; GRAV_THRESHOLD ; 0     ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: pipe_generator:pipes ;
++-----------------+-------+-----------------------------------------+
+; Parameter Name  ; Value ; Type                                    ;
++-----------------+-------+-----------------------------------------+
+; SHIFT_THERSHOLD ; 0     ; Signed Integer                          ;
+; GAP             ; 0     ; Signed Integer                          ;
++-----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: pipe_generator:pipes|pipe_picker:picker ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; CHANGE         ; 0     ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: score:counter ;
++-----------------+-------+----------------------------------+
+; Parameter Name  ; Value ; Type                             ;
++-----------------+-------+----------------------------------+
+; SCORE_THRESHOLD ; 0     ; Signed Integer                   ;
++-----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "collision:detector"          ;
++-----------------------+-------+----------+--------------+
+; Port                  ; Type  ; Severity ; Details      ;
++-----------------------+-------+----------+--------------+
+; RedPixels[15][15..14] ; Input ; Info     ; Stuck at GND ;
+; RedPixels[15][11..0]  ; Input ; Info     ; Stuck at GND ;
+; RedPixels[14][15..14] ; Input ; Info     ; Stuck at GND ;
+; RedPixels[14][11..0]  ; Input ; Info     ; Stuck at GND ;
+; RedPixels[13][15..14] ; Input ; Info     ; Stuck at GND ;
+; RedPixels[13][11..0]  ; Input ; Info     ; Stuck at GND ;
+; RedPixels[12][15..14] ; Input ; Info     ; Stuck at GND ;
+; RedPixels[12][11..0]  ; Input ; Info     ; Stuck at GND ;
+; RedPixels[11][15..14] ; Input ; Info     ; Stuck at GND ;
+; RedPixels[11][11..0]  ; Input ; Info     ; Stuck at GND ;
+; RedPixels[10][15..14] ; Input ; Info     ; Stuck at GND ;
+; RedPixels[10][11..0]  ; Input ; Info     ; Stuck at GND ;
+; RedPixels[9][15..14]  ; Input ; Info     ; Stuck at GND ;
+; RedPixels[9][11..0]   ; Input ; Info     ; Stuck at GND ;
+; RedPixels[8][15..14]  ; Input ; Info     ; Stuck at GND ;
+; RedPixels[8][11..0]   ; Input ; Info     ; Stuck at GND ;
+; RedPixels[7][15..14]  ; Input ; Info     ; Stuck at GND ;
+; RedPixels[7][11..0]   ; Input ; Info     ; Stuck at GND ;
+; RedPixels[6][15..14]  ; Input ; Info     ; Stuck at GND ;
+; RedPixels[6][11..0]   ; Input ; Info     ; Stuck at GND ;
+; RedPixels[5][15..14]  ; Input ; Info     ; Stuck at GND ;
+; RedPixels[5][11..0]   ; Input ; Info     ; Stuck at GND ;
+; RedPixels[4][15..14]  ; Input ; Info     ; Stuck at GND ;
+; RedPixels[4][11..0]   ; Input ; Info     ; Stuck at GND ;
+; RedPixels[3][15..14]  ; Input ; Info     ; Stuck at GND ;
+; RedPixels[3][11..0]   ; Input ; Info     ; Stuck at GND ;
+; RedPixels[2][15..14]  ; Input ; Info     ; Stuck at GND ;
+; RedPixels[2][11..0]   ; Input ; Info     ; Stuck at GND ;
+; RedPixels[1][15..14]  ; Input ; Info     ; Stuck at GND ;
+; RedPixels[1][11..0]   ; Input ; Info     ; Stuck at GND ;
+; RedPixels[0][15..14]  ; Input ; Info     ; Stuck at GND ;
+; RedPixels[0][11..0]   ; Input ; Info     ; Stuck at GND ;
++-----------------------+-------+----------+--------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "LEDDriver:Driver"            ;
++-----------------------+-------+----------+--------------+
+; Port                  ; Type  ; Severity ; Details      ;
++-----------------------+-------+----------+--------------+
+; EnableCount           ; Input ; Info     ; Stuck at VCC ;
+; RedPixels[15][15..14] ; Input ; Info     ; Stuck at GND ;
+; RedPixels[15][11..0]  ; Input ; Info     ; Stuck at GND ;
+; RedPixels[14][15..14] ; Input ; Info     ; Stuck at GND ;
+; RedPixels[14][11..0]  ; Input ; Info     ; Stuck at GND ;
+; RedPixels[13][15..14] ; Input ; Info     ; Stuck at GND ;
+; RedPixels[13][11..0]  ; Input ; Info     ; Stuck at GND ;
+; RedPixels[12][15..14] ; Input ; Info     ; Stuck at GND ;
+; RedPixels[12][11..0]  ; Input ; Info     ; Stuck at GND ;
+; RedPixels[11][15..14] ; Input ; Info     ; Stuck at GND ;
+; RedPixels[11][11..0]  ; Input ; Info     ; Stuck at GND ;
+; RedPixels[10][15..14] ; Input ; Info     ; Stuck at GND ;
+; RedPixels[10][11..0]  ; Input ; Info     ; Stuck at GND ;
+; RedPixels[9][15..14]  ; Input ; Info     ; Stuck at GND ;
+; RedPixels[9][11..0]   ; Input ; Info     ; Stuck at GND ;
+; RedPixels[8][15..14]  ; Input ; Info     ; Stuck at GND ;
+; RedPixels[8][11..0]   ; Input ; Info     ; Stuck at GND ;
+; RedPixels[7][15..14]  ; Input ; Info     ; Stuck at GND ;
+; RedPixels[7][11..0]   ; Input ; Info     ; Stuck at GND ;
+; RedPixels[6][15..14]  ; Input ; Info     ; Stuck at GND ;
+; RedPixels[6][11..0]   ; Input ; Info     ; Stuck at GND ;
+; RedPixels[5][15..14]  ; Input ; Info     ; Stuck at GND ;
+; RedPixels[5][11..0]   ; Input ; Info     ; Stuck at GND ;
+; RedPixels[4][15..14]  ; Input ; Info     ; Stuck at GND ;
+; RedPixels[4][11..0]   ; Input ; Info     ; Stuck at GND ;
+; RedPixels[3][15..14]  ; Input ; Info     ; Stuck at GND ;
+; RedPixels[3][11..0]   ; Input ; Info     ; Stuck at GND ;
+; RedPixels[2][15..14]  ; Input ; Info     ; Stuck at GND ;
+; RedPixels[2][11..0]   ; Input ; Info     ; Stuck at GND ;
+; RedPixels[1][15..14]  ; Input ; Info     ; Stuck at GND ;
+; RedPixels[1][11..0]   ; Input ; Info     ; Stuck at GND ;
+; RedPixels[0][15..14]  ; Input ; Info     ; Stuck at GND ;
+; RedPixels[0][11..0]   ; Input ; Info     ; Stuck at GND ;
++-----------------------+-------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "clock_divider:cdiv"                                                                           ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; divided_clocks ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 431                         ;
+;     ENA               ; 10                          ;
+;     ENA SCLR          ; 314                         ;
+;     ENA SCLR SLD      ; 30                          ;
+;     ENA SLD           ; 2                           ;
+;     SCLR              ; 33                          ;
+;     SLD               ; 1                           ;
+;     plain             ; 41                          ;
+; arriav_lcell_comb     ; 623                         ;
+;     arith             ; 288                         ;
+;         1 data inputs ; 286                         ;
+;         2 data inputs ; 2                           ;
+;     normal            ; 335                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 22                          ;
+;         3 data inputs ; 20                          ;
+;         4 data inputs ; 57                          ;
+;         5 data inputs ; 73                          ;
+;         6 data inputs ; 157                         ;
+; boundary_port         ; 103                         ;
+;                       ;                             ;
+; Max LUT depth         ; 9.00                        ;
+; Average LUT depth     ; 3.90                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+    Info: Processing started: Fri Dec 11 22:29:09 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file clock_divider.sv
+    Info (12023): Found entity 1: clock_divider File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/clock_divider.sv Line: 3
+Info (12021): Found 3 design units, including 3 entities, in source file leddriver.sv
+    Info (12023): Found entity 1: LEDDriver File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/LEDDriver.sv Line: 13
+    Info (12023): Found entity 2: LEDDriver_Test File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/LEDDriver.sv Line: 34
+    Info (12023): Found entity 3: LEDDriver_TestPhysical File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/LEDDriver.sv Line: 71
+Info (12021): Found 2 design units, including 2 entities, in source file led_test.sv
+    Info (12023): Found entity 1: LED_test File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/LED_test.sv Line: 1
+    Info (12023): Found entity 2: LED_test_testbench File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/LED_test.sv Line: 59
+Info (12021): Found 3 design units, including 3 entities, in source file de1_soc.sv
+    Info (12023): Found entity 1: DE1_SoC File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/DE1_SoC.sv Line: 2
+    Info (12023): Found entity 2: score File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/DE1_SoC.sv Line: 96
+    Info (12023): Found entity 3: DE1_SoC_testbench File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/DE1_SoC.sv Line: 141
+Info (12021): Found 2 design units, including 2 entities, in source file bird.sv
+    Info (12023): Found entity 1: bird File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/bird.sv Line: 1
+    Info (12023): Found entity 2: bird_testbench File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/bird.sv Line: 53
+Info (12021): Found 2 design units, including 2 entities, in source file series_diffs.sv
+    Info (12023): Found entity 1: series_diffs File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/series_diffs.sv Line: 1
+    Info (12023): Found entity 2: series_diffs_testbench File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/series_diffs.sv Line: 16
+Info (12021): Found 2 design units, including 2 entities, in source file pipe_generator.sv
+    Info (12023): Found entity 1: pipe_generator File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/pipe_generator.sv Line: 1
+    Info (12023): Found entity 2: pipe_generator_testbench File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/pipe_generator.sv Line: 64
+Info (12021): Found 2 design units, including 2 entities, in source file pipe_picker.sv
+    Info (12023): Found entity 1: pipe_picker File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/pipe_picker.sv Line: 1
+    Info (12023): Found entity 2: pipe_picker_testbench File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/pipe_picker.sv Line: 104
+Info (12021): Found 2 design units, including 2 entities, in source file seg7.sv
+    Info (12023): Found entity 1: seg7 File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/seg7.sv Line: 1
+    Info (12023): Found entity 2: seg7_testbench File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/seg7.sv Line: 23
+Info (12021): Found 2 design units, including 2 entities, in source file collision.sv
+    Info (12023): Found entity 1: collision File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/collision.sv Line: 1
+    Info (12023): Found entity 2: collision_testbench File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/collision.sv Line: 27
+Info (12127): Elaborating entity "DE1_SoC" for the top level hierarchy
+Info (12128): Elaborating entity "clock_divider" for hierarchy "clock_divider:cdiv" File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/DE1_SoC.sv Line: 28
+Info (12128): Elaborating entity "LEDDriver" for hierarchy "LEDDriver:Driver" File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/DE1_SoC.sv Line: 45
+Info (12128): Elaborating entity "series_diffs" for hierarchy "series_diffs:s1" File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/DE1_SoC.sv Line: 62
+Info (12128): Elaborating entity "bird" for hierarchy "bird:flappy" File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/DE1_SoC.sv Line: 64
+Info (12128): Elaborating entity "pipe_generator" for hierarchy "pipe_generator:pipes" File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/DE1_SoC.sv Line: 80
+Info (12128): Elaborating entity "pipe_picker" for hierarchy "pipe_generator:pipes|pipe_picker:picker" File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/pipe_generator.sv Line: 8
+Info (12128): Elaborating entity "score" for hierarchy "score:counter" File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/DE1_SoC.sv Line: 82
+Info (12128): Elaborating entity "seg7" for hierarchy "seg7:ten" File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/DE1_SoC.sv Line: 84
+Info (12128): Elaborating entity "collision" for hierarchy "collision:detector" File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/DE1_SoC.sv Line: 87
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file F:/study/AU 20/ee271/ee271labs/lab8/led-driver/output_files/DE1_SoC.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 843 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 15 input pins
+    Info (21059): Implemented 88 output pins
+    Info (21061): Implemented 740 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4835 megabytes
+    Info: Processing ended: Fri Dec 11 22:29:23 2020
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:28
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in F:/study/AU 20/ee271/ee271labs/lab8/led-driver/output_files/DE1_SoC.map.smsg.
+
+

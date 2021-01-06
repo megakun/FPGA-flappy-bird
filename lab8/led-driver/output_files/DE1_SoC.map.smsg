@@ -1,0 +1,4 @@
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Warning (10268): Verilog HDL information at pipe_generator.sv(11): always construct contains both blocking and non-blocking assignments File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/pipe_generator.sv Line: 11
+Info (10281): Verilog HDL Declaration information at pipe_generator.sv(1): object "GAP" differs only in case from object "gap" in the same scope File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/pipe_generator.sv Line: 1
+Warning (10034): Output port "LEDR" at DE1_SoC.sv(4) has no driver File: F:/study/AU 20/ee271/ee271labs/lab8/led-driver/DE1_SoC.sv Line: 4

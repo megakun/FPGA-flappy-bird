@@ -1,0 +1,71 @@
+module victory (edgelight_L, edgelight_R, PL, PR, rst, clk, display);
+	input logic edgelight_L, edgelight_R, PL, PR, clk, rst;
+	output logic [6:0] display
+	
+	enum {nw, lw, rw} ps, ns;
+	
+	always_comb begin 
+		case(ps)  
+			nw:  if (edgelight_L & PL & ~PR )    ns = lw;
+				  else if(edgelight_R & PR & ~PL) ns = rw;
+				  else                            ns = nw;
+				  
+			rw :	ns = rw;
+			lw :  ns = lw;
+			
+		endcase
+		
+		if (ps == rw)        display = 7'b0100100;
+		else if (ps == lw)   display = 7'b1111001;
+		else 					   dispaly = 7'b1111111; // nw
+	end 
+	
+	always_ff @(posedge clk) begin
+		if(rst)
+			ps <= nw; 
+		else 
+			ps <= ns;
+	end
+	
+endmodule
+
+
+module victory_testbench();
+	logic edgelight_L, edgelight_R, PL, PR, clk, rst;
+	logic [6:0] display;
+	
+	victory dut (.edgelight_L, .edgelight_R, .PL, .PR, .clk, .rst, .display);
+	
+	parameter CLOCK_PERIOD = 100;
+	initial begin
+		clk <= 0;
+		forever #(CLOCK_PERIOD / 2)
+		clk <= ~clk;
+	end
+	
+	initial begin
+		reset <= 1;										@(posedge clk);
+															@(posedge clk);
+		reset <= 0;										@(posedge clk);
+															@(posedge clk);
+		LED9 <= 1; LED1 <= 0; L <= 1; R <= 0;	@(posedge clk);
+															@(posedge clk);
+		LED9 <= 0; LED1 <= 1;						@(posedge clk);
+															@(posedge clk);
+		LED9 <= 1; LED1 <= 1;						@(posedge clk);
+															@(posedge clk);
+					  LED1 <= 0;			R <= 1;  @(posedge clk);
+															@(posedge clk);
+		reset <= 1;										@(posedge clk);
+															@(posedge clk);
+		reset <= 0;										@(posedge clk);
+															@(posedge clk);
+		LED9 <= 0; LED1 <= 1; L <= 0; R <= 1;	@(posedge clk);
+															@(posedge clk);
+		LED9 <= 1;				 						@(posedge clk);
+															@(posedge clk);
+		LED9 <= 0; 				 L <= 1;				@(posedge clk);
+															@(posedge clk);
+		$stop;
+	end
+endmodule

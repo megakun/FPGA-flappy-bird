@@ -1,0 +1,156 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 02:40:49 on Nov 25,2020
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 02:40:49 on Nov 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
+# Start time: 02:40:49 on Nov 25,2020
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# Loading work.series_diffs
+# Loading work.input_buffer
+# Loading work.light_field
+# Loading work.normalLight
+# Loading work.centerLight
+# Loading work.victory
+# Loading work.seg7
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: megak  Hostname: KUN-LAPTOP  ProcessID: 17220
+#           Attempting to use alternate WLF file "./wlfts90e2n".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfts90e2n
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./DE1_SoC.sv(156)
+#    Time: 9550 ps  Iteration: 1  Instance: /DE1_SoC_testbench
+# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 156
+add wave -position end  sim:/DE1_SoC_testbench/dut/V/nextRound
+add wave -position 2  sim:/DE1_SoC_testbench/dut/V/l_Score
+add wave -position 8  sim:/DE1_SoC_testbench/dut/V/r_Score
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {F:/study/AU 20/ee271/ee271labs/lab7/back up for part 1/Lab1_Files_for_Quartus_FA20/DE1_SoC_wave.do}
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 02:42:04 on Nov 25,2020
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 02:42:04 on Nov 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 02:42:06 on Nov 25,2020, Elapsed time: 0:01:17
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
+# Start time: 02:42:06 on Nov 25,2020
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# Loading work.series_diffs
+# Loading work.input_buffer
+# Loading work.light_field
+# Loading work.normalLight
+# Loading work.centerLight
+# Loading work.victory
+# Loading work.seg7
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: megak  Hostname: KUN-LAPTOP  ProcessID: 17220
+#           Attempting to use alternate WLF file "./wlft3jx20k".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft3jx20k
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./DE1_SoC.sv(156)
+#    Time: 9550 ps  Iteration: 1  Instance: /DE1_SoC_testbench
+# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 156
+add wave -position 0  sim:/DE1_SoC_testbench/HEX0
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 02:42:57 on Nov 25,2020
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 02:42:57 on Nov 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 02:43:01 on Nov 25,2020, Elapsed time: 0:00:55
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
+# Start time: 02:43:01 on Nov 25,2020
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# Loading work.series_diffs
+# Loading work.input_buffer
+# Loading work.light_field
+# Loading work.normalLight
+# Loading work.centerLight
+# Loading work.victory
+# Loading work.seg7
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: megak  Hostname: KUN-LAPTOP  ProcessID: 17220
+#           Attempting to use alternate WLF file "./wlfts1g9mw".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfts1g9mw
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./DE1_SoC.sv(156)
+#    Time: 9550 ps  Iteration: 1  Instance: /DE1_SoC_testbench
+# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 156
+add wave -position 0  sim:/DE1_SoC_testbench/HEX0
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {F:/study/AU 20/ee271/ee271labs/lab7/back up for part 1/Lab1_Files_for_Quartus_FA20/DE1_SoC_wave.do}
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 02:43:57 on Nov 25,2020
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 02:43:57 on Nov 25,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 02:43:58 on Nov 25,2020, Elapsed time: 0:00:57
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
+# Start time: 02:43:58 on Nov 25,2020
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# Loading work.series_diffs
+# Loading work.input_buffer
+# Loading work.light_field
+# Loading work.normalLight
+# Loading work.centerLight
+# Loading work.victory
+# Loading work.seg7
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: megak  Hostname: KUN-LAPTOP  ProcessID: 17220
+#           Attempting to use alternate WLF file "./wlft7ahqys".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft7ahqys
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./DE1_SoC.sv(156)
+#    Time: 9550 ps  Iteration: 1  Instance: /DE1_SoC_testbench
+# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 156
+# End time: 02:44:15 on Nov 25,2020, Elapsed time: 0:00:17
+# Errors: 0, Warnings: 2

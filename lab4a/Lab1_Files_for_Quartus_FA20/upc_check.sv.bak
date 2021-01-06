@@ -1,0 +1,23 @@
+module upc_status(upcm, D, S);
+	input logic [9:6] upcm;
+	output logic D, S;
+	
+	assign D = SW[8] | (SW[9] & SW[7]);
+	assign S = (~SW[8] & ~SW[7] & ~SW[6]) | (SW[9] & SW[7] & ~SW[6]);
+	
+endmodule
+
+module upc_status_testbench();
+	logic D, S;
+	logic [9:6] upcm;
+		
+	upc_status dut (.upcm, .D, .S);
+	
+	integer i;
+	initial begin
+		
+		for(i = 0; i < 16; i++) begin
+			upcm[9:6] = i; #10;
+		end
+	end
+endmodule

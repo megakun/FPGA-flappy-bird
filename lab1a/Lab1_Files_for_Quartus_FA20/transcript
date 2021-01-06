@@ -1,0 +1,57 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:02:36 on Oct 15,2020
+# vlog -reportprogress 300 ./mux4_1.sv 
+# -- Compiling module mux4_1
+# -- Compiling module mux4_1_testbench
+# 
+# Top level modules:
+# 	mux4_1_testbench
+# End time: 22:02:37 on Oct 15,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work mux4_1_testbench 
+# Start time: 22:02:37 on Oct 15,2020
+# Loading sv_std.std
+# Loading work.mux4_1_testbench
+# Loading work.mux4_1
+# Loading work.mux2_1
+# ** Error: Cannot open macro file: mux4_1_wave.do
+# Error in macro ./runlab.do line 17
+# Cannot open macro file: mux4_1_wave.do
+#     while executing
+# "do mux4_1_wave.do"
+add wave -position end  sim:/mux4_1_testbench/i00
+add wave -position end  sim:/mux4_1_testbench/i01
+add wave -position end  sim:/mux4_1_testbench/i10
+add wave -position end  sim:/mux4_1_testbench/i11
+add wave -position end  sim:/mux4_1_testbench/out
+add wave -position end  sim:/mux4_1_testbench/sel0
+add wave -position end  sim:/mux4_1_testbench/sel1
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {F:/study/AU 20/ee271/ee271labs/lab1a/Lab1_Files_for_Quartus_FA20/mux4_1_wave.do}
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:03:54 on Oct 15,2020
+# vlog -reportprogress 300 ./mux4_1.sv 
+# -- Compiling module mux4_1
+# -- Compiling module mux4_1_testbench
+# 
+# Top level modules:
+# 	mux4_1_testbench
+# End time: 22:03:54 on Oct 15,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 22:03:56 on Oct 15,2020, Elapsed time: 0:01:19
+# Errors: 3, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work mux4_1_testbench 
+# Start time: 22:03:56 on Oct 15,2020
+# Loading sv_std.std
+# Loading work.mux4_1_testbench
+# Loading work.mux4_1
+# Loading work.mux2_1
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# End time: 22:10:46 on Oct 15,2020, Elapsed time: 0:06:50
+# Errors: 0, Warnings: 0

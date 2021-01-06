@@ -1,0 +1,569 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dF:/study/AU 20/ee271/lab8/led-driver
+vbird
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z1 !s110 1607754861
+!i10b 1
+!s100 l5Y1XMKX7o4D1eHm5JG_>2
+IJniP@`6@d6a`97LXo7WA`1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 !s105 bird_sv_unit
+S1
+Z4 dF:/study/AU 20/ee271/ee271labs/lab8/led-driver
+Z5 w1607667788
+Z6 8./bird.sv
+Z7 F./bird.sv
+L0 1
+Z8 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z9 !s108 1607754861.000000
+Z10 !s107 ./bird.sv|
+Z11 !s90 -reportprogress|300|./bird.sv|
+!i113 1
+Z12 tCvgOpt 0
+vbird_testbench
+R0
+R1
+!i10b 1
+!s100 Sh1SWnNO2Wz2g5DigzJGK2
+IFKdafdjmVl2ocYCze5HIK1
+R2
+R3
+S1
+R4
+R5
+R6
+R7
+L0 53
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+vclock_divider
+R0
+!s110 1607754345
+!i10b 1
+!s100 4PKDMMF3Q=3_SHG:jOYCU1
+IVRF@=><EhcF6j_:XeNTan0
+R2
+!s105 clock_divider_sv_unit
+S1
+R4
+w1606981096
+8./clock_divider.sv
+F./clock_divider.sv
+L0 3
+R8
+r1
+!s85 0
+31
+!s108 1607754345.000000
+!s107 ./clock_divider.sv|
+!s90 -reportprogress|300|./clock_divider.sv|
+!i113 1
+R12
+vcollision
+R0
+R1
+!i10b 1
+!s100 NcFIH1`JkzHKS]zFcI6632
+IAU;z?MfGHk1>hE9Le4KPa2
+R2
+Z13 !s105 collision_sv_unit
+S1
+R4
+Z14 w1607752680
+Z15 8./collision.sv
+Z16 F./collision.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+Z17 !s107 ./collision.sv|
+Z18 !s90 -reportprogress|300|./collision.sv|
+!i113 1
+R12
+vcollision_testbench
+R0
+R1
+!i10b 1
+!s100 oBNT5PIkz1`o^>Sh4SL091
+I9X_@g9;9<PgSaUFSUZE5a2
+R2
+R13
+S1
+R4
+R14
+R15
+R16
+L0 27
+R8
+r1
+!s85 0
+31
+R9
+R17
+R18
+!i113 1
+R12
+vDE1_SoC
+R0
+R1
+!i10b 1
+!s100 9R_6a_[fo72iJK1gUE0l^0
+IZ8lOF7CIENi=L2^YjPIFm2
+R2
+Z19 !s105 DE1_SoC_sv_unit
+S1
+R4
+Z20 w1607754854
+Z21 8./DE1_SoC.sv
+Z22 F./DE1_SoC.sv
+L0 2
+R8
+r1
+!s85 0
+31
+R9
+Z23 !s107 ./DE1_SoC.sv|
+Z24 !s90 -reportprogress|300|./DE1_SoC.sv|
+!i113 1
+R12
+n@d@e1_@so@c
+vDE1_SoC_testbench
+R0
+R1
+!i10b 1
+!s100 20dFB1R`;?lVRYJB>5;J<1
+Ie=h4Okn^Ti^AV?TE^3?ZP0
+R2
+R19
+S1
+R4
+R20
+R21
+R22
+L0 141
+R8
+r1
+!s85 0
+31
+R9
+R23
+R24
+!i113 1
+R12
+n@d@e1_@so@c_testbench
+vLED_test
+R0
+R1
+!i10b 1
+!s100 R]cFP1z2zEnlXCXMbkBHP2
+Igd=0@D6JSRcS3T96fLDjL2
+R2
+Z25 !s105 LED_test_sv_unit
+S1
+R4
+Z26 w1606569000
+Z27 8./LED_test.sv
+Z28 F./LED_test.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+Z29 !s107 ./LED_test.sv|
+Z30 !s90 -reportprogress|300|./LED_test.sv|
+!i113 1
+R12
+n@l@e@d_test
+vLED_test_testbench
+R0
+R1
+!i10b 1
+!s100 f`PcDnl6iz9m7N[5iln1d3
+IFVNe`SeU894l=g2z0HOze1
+R2
+R25
+S1
+R4
+R26
+R27
+R28
+L0 59
+R8
+r1
+!s85 0
+31
+R9
+R29
+R30
+!i113 1
+R12
+n@l@e@d_test_testbench
+vLEDDriver
+R0
+R1
+!i10b 1
+!s100 n<gEFK66[bWGC8M781`3C0
+IGYoo^`JBCMMAnmTZ0]B9o1
+R2
+Z31 !s105 LEDDriver_sv_unit
+S1
+R4
+Z32 w1606559262
+Z33 8./LEDDriver.sv
+Z34 F./LEDDriver.sv
+L0 13
+R8
+r1
+!s85 0
+31
+R9
+Z35 !s107 ./LEDDriver.sv|
+Z36 !s90 -reportprogress|300|./LEDDriver.sv|
+!i113 1
+R12
+n@l@e@d@driver
+vLEDDriver_Test
+R0
+R1
+!i10b 1
+!s100 BFzZiRmkYZDjhUZo39UFA1
+I^G^Af_45aWi2[M>GRbcVG3
+R2
+R31
+S1
+R4
+R32
+R33
+R34
+L0 34
+R8
+r1
+!s85 0
+31
+R9
+R35
+R36
+!i113 1
+R12
+n@l@e@d@driver_@test
+vLEDDriver_TestPhysical
+R0
+R1
+!i10b 1
+!s100 e4TDiMSB]SS^JfnE^HeW03
+IRnWjiELAk^;:g4L_Q:g9e2
+R2
+R31
+S1
+R4
+R32
+R33
+R34
+L0 71
+R8
+r1
+!s85 0
+31
+R9
+R35
+R36
+!i113 1
+R12
+n@l@e@d@driver_@test@physical
+vpipe_generator
+R0
+R1
+!i10b 1
+!s100 dIOS9mb^oVB2Zc=5M`:N42
+IlfH1>3PPm]YWL]HOanh`c0
+R2
+Z37 !s105 pipe_generator_sv_unit
+S1
+R4
+Z38 w1607754549
+Z39 8./pipe_generator.sv
+Z40 F./pipe_generator.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+Z41 !s107 ./pipe_generator.sv|
+Z42 !s90 -reportprogress|300|./pipe_generator.sv|
+!i113 1
+R12
+vpipe_generator_testbench
+R0
+R1
+!i10b 1
+!s100 aAn`NUjgO7BJ3dDXGZNgf3
+IZe>G:Z?6I<1QB@Q6NEA0f1
+R2
+R37
+S1
+R4
+R38
+R39
+R40
+L0 64
+R8
+r1
+!s85 0
+31
+R9
+R41
+R42
+!i113 1
+R12
+vpipe_picker
+R0
+R1
+!i10b 1
+!s100 2EC22z5[cF8J3IJ<J@Z]Q3
+IQ>7kTcfQlJS7]YPMP9fzJ3
+R2
+Z43 !s105 pipe_picker_sv_unit
+S1
+R4
+Z44 w1607734410
+Z45 8./pipe_picker.sv
+Z46 F./pipe_picker.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+Z47 !s107 ./pipe_picker.sv|
+Z48 !s90 -reportprogress|300|./pipe_picker.sv|
+!i113 1
+R12
+vpipe_picker_testbench
+R0
+R1
+!i10b 1
+!s100 2L673@oacPeIN6zYZ^ng81
+Id>]4_WG[[z7AD`?Ui996b0
+R2
+R43
+S1
+R4
+R44
+R45
+R46
+L0 104
+R8
+r1
+!s85 0
+31
+R9
+R47
+R48
+!i113 1
+R12
+vscore
+R0
+R1
+!i10b 1
+!s100 XX[KN3HhgQDiYf0:GXGEg0
+IOE1iFB6jUDLJ:K6n[ZQ0?2
+R2
+R19
+S1
+R4
+R20
+R21
+R22
+L0 96
+R8
+r1
+!s85 0
+31
+R9
+R23
+R24
+!i113 1
+R12
+vscore1
+R0
+Z49 !s110 1607737513
+!i10b 1
+!s100 IcG=OS;5W7>LLncKMWJ9n1
+I21IbmLoZ=h@=TKS@O3A9Z1
+R2
+Z50 !s105 score_sv_unit
+S1
+R4
+Z51 w1607737353
+Z52 8./score.sv
+Z53 F./score.sv
+L0 1
+R8
+r1
+!s85 0
+31
+Z54 !s108 1607737513.000000
+Z55 !s107 ./score.sv|
+Z56 !s90 -reportprogress|300|./score.sv|
+!i113 1
+R12
+vscore1_testbench
+R0
+R49
+!i10b 1
+!s100 :QN1L]V:Y4AH4H:7mWTQN3
+IL3[QL6L_bo`DdcW:6;zhd0
+R2
+R50
+S1
+R4
+R51
+R52
+R53
+L0 45
+R8
+r1
+!s85 0
+31
+R54
+R55
+R56
+!i113 1
+R12
+vscore_testbench
+R0
+!s110 1607743033
+!i10b 1
+!s100 Ik=JJ9zRXgfkkZMOQ8^co3
+IeZoQN[O^l:jYH>43V]fII3
+R2
+R50
+S1
+R4
+w1607743024
+R52
+R53
+L0 44
+R8
+r1
+!s85 0
+31
+!s108 1607743033.000000
+R55
+R56
+!i113 1
+R12
+vseg7
+R0
+R1
+!i10b 1
+!s100 8^IH8U=k?3?K>k2JR3J>Y1
+IO[FS?ICXdO_9bL8NLSLQL2
+R2
+Z57 !s105 seg7_sv_unit
+S1
+R4
+Z58 w1607748702
+Z59 8./seg7.sv
+Z60 F./seg7.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+Z61 !s107 ./seg7.sv|
+Z62 !s90 -reportprogress|300|./seg7.sv|
+!i113 1
+R12
+vseg7_testbench
+R0
+R1
+!i10b 1
+!s100 ?:Ag>BH63cR0k1G9[XD`L1
+IHF<?fIFD<nJmG]KUU4I`E2
+R2
+R57
+S1
+R4
+R58
+R59
+R60
+L0 23
+R8
+r1
+!s85 0
+31
+R9
+R61
+R62
+!i113 1
+R12
+vseries_diffs
+R0
+Z63 !s110 1607663245
+!i10b 1
+!s100 3J@jo]dEO]0O8EnaYiE7Q1
+IBT=F;^5ZRAca`3gK@WGkE0
+R2
+Z64 !s105 series_diffs_sv_unit
+S1
+R4
+Z65 w1607659840
+Z66 8./series_diffs.sv
+Z67 F./series_diffs.sv
+L0 1
+R8
+r1
+!s85 0
+31
+Z68 !s108 1607663245.000000
+Z69 !s107 ./series_diffs.sv|
+Z70 !s90 -reportprogress|300|./series_diffs.sv|
+!i113 1
+R12
+vseries_diffs_testbench
+R0
+R63
+!i10b 1
+!s100 XKohKdefA?g=7[Sjf5YN>3
+I>;beoZ;[RF4VPiBzV0=aQ1
+R2
+R64
+S1
+R4
+R65
+R66
+R67
+L0 16
+R8
+r1
+!s85 0
+31
+R68
+R69
+R70
+!i113 1
+R12

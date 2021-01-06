@@ -1,0 +1,9 @@
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Warning (10273): Verilog HDL warning at seg7.sv(18): extended using "x" or "z" File: F:/study/AU 20/ee271/ee271labs/lab4a/Lab1_Files_for_Quartus_FA20/seg7.sv Line: 18
+Warning (10273): Verilog HDL warning at upc_name.sv(64): extended using "x" or "z" File: F:/study/AU 20/ee271/ee271labs/lab4a/Lab1_Files_for_Quartus_FA20/upc_name.sv Line: 64
+Warning (10273): Verilog HDL warning at upc_name.sv(65): extended using "x" or "z" File: F:/study/AU 20/ee271/ee271labs/lab4a/Lab1_Files_for_Quartus_FA20/upc_name.sv Line: 65
+Warning (10273): Verilog HDL warning at upc_name.sv(66): extended using "x" or "z" File: F:/study/AU 20/ee271/ee271labs/lab4a/Lab1_Files_for_Quartus_FA20/upc_name.sv Line: 66
+Warning (10273): Verilog HDL warning at upc_name.sv(67): extended using "x" or "z" File: F:/study/AU 20/ee271/ee271labs/lab4a/Lab1_Files_for_Quartus_FA20/upc_name.sv Line: 67
+Warning (10273): Verilog HDL warning at upc_name.sv(68): extended using "x" or "z" File: F:/study/AU 20/ee271/ee271labs/lab4a/Lab1_Files_for_Quartus_FA20/upc_name.sv Line: 68
+Warning (10273): Verilog HDL warning at upc_name.sv(69): extended using "x" or "z" File: F:/study/AU 20/ee271/ee271labs/lab4a/Lab1_Files_for_Quartus_FA20/upc_name.sv Line: 69
+Warning (10034): Output port "LEDR[9..2]" at DE1_SoC.sv(5) has no driver File: F:/study/AU 20/ee271/ee271labs/lab4a/Lab1_Files_for_Quartus_FA20/DE1_SoC.sv Line: 5

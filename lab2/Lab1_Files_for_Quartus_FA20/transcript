@@ -1,0 +1,104 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:11:45 on Oct 15,2020
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 23:11:45 on Oct 15,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
+# Start time: 23:11:45 on Oct 15,2020
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# ** Error: Cannot open macro file: DE1_SoC_wave.do
+# Error in macro ./runlab.do line 17
+# Cannot open macro file: DE1_SoC_wave.do
+#     while executing
+# "do DE1_SoC_wave.do"
+add wave -position end  sim:/DE1_SoC_testbench/LEDR
+add wave -position end  sim:/DE1_SoC_testbench/SW
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:12:36 on Oct 15,2020
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 23:12:36 on Oct 15,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 23:12:38 on Oct 15,2020, Elapsed time: 0:00:53
+# Errors: 3, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
+# Start time: 23:12:38 on Oct 15,2020
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# ** Error: Cannot open macro file: DE1_SoC_wave.do
+# Error in macro ./runlab.do line 17
+# Cannot open macro file: DE1_SoC_wave.do
+#     while executing
+# "do DE1_SoC_wave.do"
+add wave -position end  sim:/DE1_SoC_testbench/LEDR[9]
+add wave -position end  sim:/DE1_SoC_testbench/LEDR[8]
+add wave -position end  sim:/DE1_SoC_testbench/LEDR[7]
+add wave -position end  sim:/DE1_SoC_testbench/LEDR[6]
+add wave -position end  sim:/DE1_SoC_testbench/LEDR[5]
+add wave -position end  sim:/DE1_SoC_testbench/LEDR[4]
+add wave -position end  sim:/DE1_SoC_testbench/LEDR[3]
+add wave -position end  sim:/DE1_SoC_testbench/LEDR[2]
+add wave -position end  sim:/DE1_SoC_testbench/LEDR[1]
+add wave -position end  sim:/DE1_SoC_testbench/LEDR[0]
+add wave -position end  sim:/DE1_SoC_testbench/LEDR[9]
+add wave -position end  sim:/DE1_SoC_testbench/LEDR[8]
+add wave -position end  sim:/DE1_SoC_testbench/LEDR[7]
+add wave -position end  sim:/DE1_SoC_testbench/LEDR[6]
+add wave -position end  sim:/DE1_SoC_testbench/LEDR[5]
+add wave -position end  sim:/DE1_SoC_testbench/LEDR[4]
+add wave -position end  sim:/DE1_SoC_testbench/LEDR[3]
+add wave -position end  sim:/DE1_SoC_testbench/LEDR[2]
+add wave -position end  sim:/DE1_SoC_testbench/LEDR[1]
+add wave -position end  sim:/DE1_SoC_testbench/LEDR[0]
+add wave -position end  sim:/DE1_SoC_testbench/LEDR[0]
+add wave -position end  sim:/DE1_SoC_testbench/SW[8]
+add wave -position end  sim:/DE1_SoC_testbench/SW[7]
+add wave -position end  sim:/DE1_SoC_testbench/SW[6]
+add wave -position end  sim:/DE1_SoC_testbench/SW[5]
+add wave -position end  sim:/DE1_SoC_testbench/SW[4]
+add wave -position end  sim:/DE1_SoC_testbench/SW[3]
+add wave -position end  sim:/DE1_SoC_testbench/SW[2]
+add wave -position end  sim:/DE1_SoC_testbench/SW[1]
+add wave -position end  sim:/DE1_SoC_testbench/SW[0]
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {F:/study/AU 20/ee271/ee271labs/lab2/Lab1_Files_for_Quartus_FA20/DE1_SoC_wave.do}
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:16:03 on Oct 15,2020
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 23:16:03 on Oct 15,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 23:16:05 on Oct 15,2020, Elapsed time: 0:03:27
+# Errors: 3, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
+# Start time: 23:16:05 on Oct 15,2020
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# End time: 23:26:13 on Oct 15,2020, Elapsed time: 0:10:08
+# Errors: 0, Warnings: 0

@@ -1,0 +1,2 @@
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Warning (10034): Output port "LEDR" at DE1_SoC.sv(5) has no driver File: F:/study/AU 20/ee271/ee271labs/lab4/Lab1_Files_for_Quartus_FA20/DE1_SoC.sv Line: 5

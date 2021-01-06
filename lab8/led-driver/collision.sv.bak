@@ -1,0 +1,3 @@
+module collision(RedPixels, GrnPixels, gameover);
+	input logic [15:0][15:0] 
+endmodule

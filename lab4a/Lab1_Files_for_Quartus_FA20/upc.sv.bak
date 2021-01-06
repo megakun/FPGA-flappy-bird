@@ -1,0 +1,91 @@
+module upc(upcm, D, S, HEX5, HEX4, HEX3, HEX2, HEX1, HEX0);
+	input logic [9:6] upcm;
+	output logic D, S
+					 reg	[6:0]	HEX5, HEX4, HEX3, HEX2, HEX1, HEX0;
+	
+	always_comb begin
+		case (upcm)
+			// red
+			4'b0000: D = 1'b1; S = 1'b0; // without mark
+						HEX2 = 7'b0001000; // R
+						HEX1 = 7'b0110000; // E
+						HEX0 = 7'b0000001; // D
+			// blue
+			4'b0010: D = 1'b0; S = 1'b0; // without mark
+						HEX3 = 7'b0000000; // B
+						HEX2 = 7'b1110001; // L
+						HEX1 = 7'b1000001; // U
+						HEX0 = 7'b0110000; // E
+			// green		
+			4'b0100: D = 1'b0; S = 1'b0; // without mark
+						HEX4 = 7'b0100001; // G
+						HEX3 = 7'b0001000; // R
+						HEX2 = 7'b0110000; // E
+						HEX1 = 7'b0110000; // E
+						HEx0 = 7'b0010001; // N
+			// black
+			4'b0110: D = 1'b0; S = 1'b1; // without mark
+						HEX4 = 7'b0000000; // B
+						HEX3 = 7'b1110001; // L
+						HEX2 = 7'b0001000; // A
+						HEX1 = 7'b0110001; // C
+						HEx0 = 7'b1001000; // K
+			4'b0111: D = 1'b0; S = 1'b0; // with mark
+						HEX4 = 7'b0000000; // B
+						HEX3 = 7'b1110001; // L
+						HEX2 = 7'b0001000; // A
+						HEX1 = 7'b0110001; // C
+						HEx0 = 7'b1001000; // K
+			// purple			
+			4'b1000: D = 1'b1; S = 1'b1; // without mark
+						HEX5 = 7'b0011000; // P
+						HEX4 = 7'b1000001; // U
+						HEX3 = 7'b0001000; // R
+						HEX2 = 7'b0011000; // P
+						HEX1 = 7'b1110001; // L
+						HEX0 = 7'b0110000; // E						
+			4'b1001: D = 1'b1; S = 1'b0; // with mark
+						HEX5 = 7'b0011000; // P
+						HEX4 = 7'b1000001; // U
+						HEX3 = 7'b0001000; // R
+						HEX2 = 7'b0011000; // P
+						HEX1 = 7'b1110001; // L
+						HEX0 = 7'b0110000; // E	
+			// pink
+			4'b1010: D = 1'b1; S = 1'b1; // without mark
+						HEX3 = 7'b0011000; // P
+						HEX2 = 7'b1111001; // I
+						HEx1 = 7'b0010001; // N
+						HEx0 = 7'b1010000; // K
+			4'b1011: D = 1'b1; S = 1'b0; // with mark
+						HEX3 = 7'b0011000; // P
+						HEX2 = 7'b1111001; // I
+						HEx1 = 7'b0010001; // N
+						HEx0 = 7'b1010000; // K
+			default: D = 1'b0; S = 1'b0; 
+						HEX5 = 7'bx; 
+						HEX4 = 7'bx; 
+						HEX3 = 7'bx; 
+						HEX2 = 7'bx; 
+						HEX1 = 7'bx; 
+						HEX0 = 7'bx; 
+		endcase
+	end
+endmodule
+
+module upc_check_testbench();
+	wire  [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5;
+	wire  [9:0] LEDR;
+	reg   [3:0] KEY;
+	reg   [9:0] SW;
+		
+	upc_check dut (.HEX0, .HEX1, .HEX2, .HEX3, .HEX4, .HEX5, SW[9:6], LEDR[0], LEDR[1]);
+
+	integer i;
+	initial begin
+		SW[5;0] = 1'b0
+		for(i = 0; i < 16; i++) begin
+			SW[9:6] = i; #10;
+		end
+	end
+endmodule

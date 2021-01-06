@@ -1,0 +1,59 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:49:04 on Oct 30,2020
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 18:49:04 on Oct 30,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
+# Start time: 18:49:04 on Oct 30,2020
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# Loading work.seg7
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+add wave -position end  sim:/DE1_SoC_testbench/HEX0
+add wave -position end  sim:/DE1_SoC_testbench/HEX1
+add wave -position end  sim:/DE1_SoC_testbench/SW[3]
+add wave -position end  sim:/DE1_SoC_testbench/SW[2]
+add wave -position end  sim:/DE1_SoC_testbench/SW[1]
+add wave -position end  sim:/DE1_SoC_testbench/SW[0]
+add wave -position end  sim:/DE1_SoC_testbench/HEX0
+add wave -position end  sim:/DE1_SoC_testbench/SW[7]
+add wave -position end  sim:/DE1_SoC_testbench/SW[6]
+add wave -position end  sim:/DE1_SoC_testbench/SW[5]
+add wave -position end  sim:/DE1_SoC_testbench/SW[4]
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {F:/study/AU 20/ee271/ee271labs/lab4/Lab1_Files_for_Quartus_FA20/DE1_SoC_wave.do}
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:50:45 on Oct 30,2020
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 18:50:45 on Oct 30,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 18:50:47 on Oct 30,2020, Elapsed time: 0:01:43
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
+# Start time: 18:50:47 on Oct 30,2020
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# Loading work.seg7
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# End time: 18:51:39 on Oct 30,2020, Elapsed time: 0:00:52
+# Errors: 0, Warnings: 0

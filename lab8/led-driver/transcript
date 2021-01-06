@@ -1,0 +1,416 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:25:44 on Dec 11,2020
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module score
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 22:25:44 on Dec 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:25:44 on Dec 11,2020
+# vlog -reportprogress 300 ./LEDDriver.sv 
+# -- Compiling module LEDDriver
+# -- Compiling module LEDDriver_Test
+# -- Compiling module LEDDriver_TestPhysical
+# 
+# Top level modules:
+# 	LEDDriver_Test
+# 	LEDDriver_TestPhysical
+# End time: 22:25:44 on Dec 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:25:44 on Dec 11,2020
+# vlog -reportprogress 300 ./LED_test.sv 
+# -- Compiling module LED_test
+# -- Compiling module LED_test_testbench
+# 
+# Top level modules:
+# 	LED_test_testbench
+# End time: 22:25:45 on Dec 11,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:25:45 on Dec 11,2020
+# vlog -reportprogress 300 ./clock_divider.sv 
+# -- Compiling module clock_divider
+# 
+# Top level modules:
+# 	clock_divider
+# End time: 22:25:45 on Dec 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
+# Start time: 22:25:45 on Dec 11,2020
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# Loading work.clock_divider
+# Loading work.LEDDriver
+# Loading work.series_diffs
+# Loading work.bird
+# Loading work.pipe_generator
+# Loading work.pipe_picker
+# Loading work.score
+# Loading work.seg7
+# Loading work.collision
+# ** Warning: (vsim-3017) ./DE1_SoC.sv(80): [TFMPC] - Too few port connections. Expected 5, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /DE1_SoC_testbench/dut/pipes File: ./pipe_generator.sv
+# ** Error: (vsim-3063) ./DE1_SoC.sv(80): Port 'gameover' not found in the connected module (3rd connection).
+#    Time: 0 ps  Iteration: 0  Instance: /DE1_SoC_testbench/dut/pipes File: ./pipe_generator.sv
+# ** Warning: (vsim-3722) ./DE1_SoC.sv(80): [TFMPC] - Missing connection for port 'tens'.
+# ** Warning: (vsim-3722) ./DE1_SoC.sv(80): [TFMPC] - Missing connection for port 'ones'.
+# ** Warning: (vsim-3017) ./pipe_generator.sv(13): [TFMPC] - Too few port connections. Expected 6, found 5.
+#    Time: 0 ps  Iteration: 0  Instance: /DE1_SoC_testbench/dut/pipes/counter File: ./DE1_SoC.sv
+# ** Warning: (vsim-3722) ./pipe_generator.sv(13): [TFMPC] - Missing connection for port 'gameover'.
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./runlab.do PAUSED at line 15
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:30:43 on Dec 11,2020
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module score
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 22:30:44 on Dec 11,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:30:44 on Dec 11,2020
+# vlog -reportprogress 300 ./LEDDriver.sv 
+# -- Compiling module LEDDriver
+# -- Compiling module LEDDriver_Test
+# -- Compiling module LEDDriver_TestPhysical
+# 
+# Top level modules:
+# 	LEDDriver_Test
+# 	LEDDriver_TestPhysical
+# End time: 22:30:44 on Dec 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:30:44 on Dec 11,2020
+# vlog -reportprogress 300 ./LED_test.sv 
+# -- Compiling module LED_test
+# -- Compiling module LED_test_testbench
+# 
+# Top level modules:
+# 	LED_test_testbench
+# End time: 22:30:44 on Dec 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:30:44 on Dec 11,2020
+# vlog -reportprogress 300 ./bird.sv 
+# -- Compiling module bird
+# -- Compiling module bird_testbench
+# 
+# Top level modules:
+# 	bird_testbench
+# End time: 22:30:44 on Dec 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:30:44 on Dec 11,2020
+# vlog -reportprogress 300 ./collision.sv 
+# -- Compiling module collision
+# -- Compiling module collision_testbench
+# 
+# Top level modules:
+# 	collision_testbench
+# End time: 22:30:44 on Dec 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:30:44 on Dec 11,2020
+# vlog -reportprogress 300 ./pipe_generator.sv 
+# -- Compiling module pipe_generator
+# -- Compiling module pipe_generator_testbench
+# 
+# Top level modules:
+# 	pipe_generator_testbench
+# End time: 22:30:44 on Dec 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:30:44 on Dec 11,2020
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# -- Compiling module seg7_testbench
+# 
+# Top level modules:
+# 	seg7_testbench
+# End time: 22:30:44 on Dec 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:30:44 on Dec 11,2020
+# vlog -reportprogress 300 ./pipe_picker.sv 
+# -- Compiling module pipe_picker
+# -- Compiling module pipe_picker_testbench
+# 
+# Top level modules:
+# 	pipe_picker_testbench
+# End time: 22:30:44 on Dec 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
+# Start time: 22:25:45 on Dec 11,2020
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# Loading work.clock_divider
+# Loading work.LEDDriver
+# Loading work.series_diffs
+# Loading work.bird
+# Loading work.pipe_generator
+# Loading work.pipe_picker
+# Loading work.score
+# Loading work.seg7
+# Loading work.collision
+# ** Error: Cannot open macro file: DE1_SoC_wave.do
+# Error in macro ./runlab.do line 24
+# Cannot open macro file: DE1_SoC_wave.do
+#     while executing
+# "do DE1_SoC_wave.do"
+add wave -position end  sim:/DE1_SoC_testbench/HEX0
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: megak  Hostname: KUN-LAPTOP  ProcessID: 14856
+#           Attempting to use alternate WLF file "./wlft8nkj5z".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft8nkj5z
+add wave -position end  sim:/DE1_SoC_testbench/HEX1
+add wave -position end  sim:/DE1_SoC_testbench/KEY[0]
+add wave -position end  sim:/DE1_SoC_testbench/clkSelect
+add wave -position 2  sim:/DE1_SoC_testbench/SW[9]
+add wave -position 0  sim:/DE1_SoC_testbench/dut/GrnPixels
+add wave -position 1  sim:/DE1_SoC_testbench/dut/RedPixels
+add wave -position 6  sim:/DE1_SoC_testbench/dut/gameover
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {F:/study/AU 20/ee271/ee271labs/lab8/led-driver/DE1_SoC_wave.do}
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:32:55 on Dec 11,2020
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module score
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 22:32:56 on Dec 11,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:32:56 on Dec 11,2020
+# vlog -reportprogress 300 ./LEDDriver.sv 
+# -- Compiling module LEDDriver
+# -- Compiling module LEDDriver_Test
+# -- Compiling module LEDDriver_TestPhysical
+# 
+# Top level modules:
+# 	LEDDriver_Test
+# 	LEDDriver_TestPhysical
+# End time: 22:32:56 on Dec 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:32:56 on Dec 11,2020
+# vlog -reportprogress 300 ./LED_test.sv 
+# -- Compiling module LED_test
+# -- Compiling module LED_test_testbench
+# 
+# Top level modules:
+# 	LED_test_testbench
+# End time: 22:32:56 on Dec 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:32:56 on Dec 11,2020
+# vlog -reportprogress 300 ./bird.sv 
+# -- Compiling module bird
+# -- Compiling module bird_testbench
+# 
+# Top level modules:
+# 	bird_testbench
+# End time: 22:32:56 on Dec 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:32:56 on Dec 11,2020
+# vlog -reportprogress 300 ./collision.sv 
+# -- Compiling module collision
+# -- Compiling module collision_testbench
+# 
+# Top level modules:
+# 	collision_testbench
+# End time: 22:32:56 on Dec 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:32:56 on Dec 11,2020
+# vlog -reportprogress 300 ./pipe_generator.sv 
+# -- Compiling module pipe_generator
+# -- Compiling module pipe_generator_testbench
+# 
+# Top level modules:
+# 	pipe_generator_testbench
+# End time: 22:32:56 on Dec 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:32:56 on Dec 11,2020
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# -- Compiling module seg7_testbench
+# 
+# Top level modules:
+# 	seg7_testbench
+# End time: 22:32:56 on Dec 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:32:56 on Dec 11,2020
+# vlog -reportprogress 300 ./pipe_picker.sv 
+# -- Compiling module pipe_picker
+# -- Compiling module pipe_picker_testbench
+# 
+# Top level modules:
+# 	pipe_picker_testbench
+# End time: 22:32:56 on Dec 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 22:32:57 on Dec 11,2020, Elapsed time: 0:07:12
+# Errors: 4, Warnings: 7
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
+# Start time: 22:32:57 on Dec 11,2020
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# Loading work.clock_divider
+# Loading work.LEDDriver
+# Loading work.series_diffs
+# Loading work.bird
+# Loading work.pipe_generator
+# Loading work.pipe_picker
+# Loading work.score
+# Loading work.seg7
+# Loading work.collision
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: megak  Hostname: KUN-LAPTOP  ProcessID: 14856
+#           Attempting to use alternate WLF file "./wlftxzw0cs".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftxzw0cs
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./DE1_SoC.sv(174)
+#    Time: 3050 ps  Iteration: 1  Instance: /DE1_SoC_testbench
+# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 174
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:34:21 on Dec 11,2020
+# vlog -reportprogress 300 ./DE1_SoC.sv 
+# -- Compiling module DE1_SoC
+# -- Compiling module score
+# -- Compiling module DE1_SoC_testbench
+# 
+# Top level modules:
+# 	DE1_SoC_testbench
+# End time: 22:34:21 on Dec 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:34:21 on Dec 11,2020
+# vlog -reportprogress 300 ./LEDDriver.sv 
+# -- Compiling module LEDDriver
+# -- Compiling module LEDDriver_Test
+# -- Compiling module LEDDriver_TestPhysical
+# 
+# Top level modules:
+# 	LEDDriver_Test
+# 	LEDDriver_TestPhysical
+# End time: 22:34:21 on Dec 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:34:21 on Dec 11,2020
+# vlog -reportprogress 300 ./LED_test.sv 
+# -- Compiling module LED_test
+# -- Compiling module LED_test_testbench
+# 
+# Top level modules:
+# 	LED_test_testbench
+# End time: 22:34:21 on Dec 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:34:21 on Dec 11,2020
+# vlog -reportprogress 300 ./bird.sv 
+# -- Compiling module bird
+# -- Compiling module bird_testbench
+# 
+# Top level modules:
+# 	bird_testbench
+# End time: 22:34:21 on Dec 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:34:21 on Dec 11,2020
+# vlog -reportprogress 300 ./collision.sv 
+# -- Compiling module collision
+# -- Compiling module collision_testbench
+# 
+# Top level modules:
+# 	collision_testbench
+# End time: 22:34:21 on Dec 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:34:21 on Dec 11,2020
+# vlog -reportprogress 300 ./pipe_generator.sv 
+# -- Compiling module pipe_generator
+# -- Compiling module pipe_generator_testbench
+# 
+# Top level modules:
+# 	pipe_generator_testbench
+# End time: 22:34:21 on Dec 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:34:21 on Dec 11,2020
+# vlog -reportprogress 300 ./seg7.sv 
+# -- Compiling module seg7
+# -- Compiling module seg7_testbench
+# 
+# Top level modules:
+# 	seg7_testbench
+# End time: 22:34:21 on Dec 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:34:21 on Dec 11,2020
+# vlog -reportprogress 300 ./pipe_picker.sv 
+# -- Compiling module pipe_picker
+# -- Compiling module pipe_picker_testbench
+# 
+# Top level modules:
+# 	pipe_picker_testbench
+# End time: 22:34:21 on Dec 11,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 22:34:24 on Dec 11,2020, Elapsed time: 0:01:27
+# Errors: 0, Warnings: 2
+# vsim -voptargs=""+acc"" -t 1ps -lib work DE1_SoC_testbench 
+# Start time: 22:34:24 on Dec 11,2020
+# Loading sv_std.std
+# Loading work.DE1_SoC_testbench
+# Loading work.DE1_SoC
+# Loading work.clock_divider
+# Loading work.LEDDriver
+# Loading work.series_diffs
+# Loading work.bird
+# Loading work.pipe_generator
+# Loading work.pipe_picker
+# Loading work.score
+# Loading work.seg7
+# Loading work.collision
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: megak  Hostname: KUN-LAPTOP  ProcessID: 14856
+#           Attempting to use alternate WLF file "./wlftcq6qmy".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftcq6qmy
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# ** Note: $stop    : ./DE1_SoC.sv(174)
+#    Time: 5050 ps  Iteration: 1  Instance: /DE1_SoC_testbench
+# Break in Module DE1_SoC_testbench at ./DE1_SoC.sv line 174
+# End time: 22:58:32 on Dec 11,2020, Elapsed time: 0:24:08
+# Errors: 0, Warnings: 2
